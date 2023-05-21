@@ -1,0 +1,121 @@
+.botaoCliente {
+    padding-right: 20px;
+    text-decoration: inherit;
+    color: inherit;
+    outline: 0;
+   
+}
+
+
+
+.menuPrimeiro{
+    background-color: black;
+}
+
+.cardContainer {
+    margin-top: 30px;  
+    size: 100vh;
+    box-sizing: border-box;
+    
+}
+
+.cardContainer2 {
+    display: flex;
+    gap: 30px;
+}
+
+.tituloPlanosMobilidade {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(39, 99, 168);
+}
+
+.itemLista {
+    text-align: left;
+}
+
+.tituloEventos {
+    font-weight: 600;
+    color: rgb(39, 99, 168);
+}
+
+.containerMapaCard {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    size: 100vh;
+}
+
+.containerMapaCard2 {
+    border: solid 2px rgb(39, 99, 168) ;
+    background-color: #fff;
+
+}
+
+.tituloMapaCard {
+    font-weight: 600;
+    color: rgb(39, 99, 168);
+    margin: 20px;
+}
+
+.tituloClientes {
+    font-weight: 600;
+    color: rgb(39, 99, 168);
+    margin: 20px;
+}
+
+.textoMapaCard {
+    margin: 20px;
+}
+
+.botaoMapaCard {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.tituloContato {
+    font-weight: 600;
+    color: rgb(39, 99, 168);
+    margin: 20px;
+}
+
+.containerContato2 {
+    margin-left: 20px;
+}
+
+.clientesNomeSpan {
+    font-weight: bold;
+    color: #8b8484;
+}
+
+.clientesTextoSpan {
+    color: rgb(39, 99, 168);
+}
+
+.anchorFooter {
+    color: white;
+    text-decoration: none;
+}
+
+.tituloFooter {
+    color: white;
+}
+
+/* .containerNav {
+    display: flex;
+    justify-content: end;
+    
+} */
+
+
+
+
+
+
+
+.navPositioning {
+    display: flex;
+    justify-content: end;
+}

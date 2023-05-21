@@ -1,0 +1,115 @@
+.containerImageOverlay1 {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    
+
+}
+
+.containerImageOverlayWholesale {
+    
+    height: 300px;
+}
+
+.textoImageOverlayWholesale {
+
+    
+    padding: 170px 0 0 20px;
+    box-sizing: border-box;
+    width: auto;
+    
+}
+
+.h5ImageOverlayWholesale {
+    font-size: 50px;
+    display: flex;
+    align-items: end;
+    color: rgb(39, 99, 168);
+    font-weight: bold;
+    box-sizing: border-box;
+    width: auto;
+    
+    
+}
+
+.divImageOverlayWholesale {
+    width: 19%;
+    border-bottom: solid 3px white;
+}
+
+.pImageOverlayWholesale {
+font-weight: bold;
+color: white;
+font-size: 20px;
+box-sizing: border-box;
+}
+
+.pTexto1Wholesale {
+    text-align: center;
+    margin: 30px 0 0 0;
+    width: 100%;
+    
+}
+
+.containerPTexto1 {
+    width: 100%;
+}
+
+.h1MapaWholesale {
+    text-align: center;
+    color: rgb(39, 99, 168) ;
+}
+
+.imagemMapaWholeSale {
+
+    margin-top: 20px;
+}
+
+.textoImageOverlayMapaWholesale {
+    text-align: center;
+
+}
+
+.h5ImageOverlayMapaWholesale {
+    font-size: 35px;
+    text-align: center;
+    border-bottom: solid 3px white;
+    color: rgb(39, 99, 168);
+    
+}
+
+.divImageOverlayMapaWholesale {
+    width: 25%;
+ 
+    
+}
+
+.textoImageOverlayMapaWholesale {
+    display: flex;
+    justify-content: center;
+  
+}
+
+.h1ParceirosWholesale {
+    
+    padding-top: 30px;
+    width: 15%;
+    text-align: center;
+    color: rgb(39, 99, 168);
+    border-bottom: solid 2px red;
+}
+
+.containerH1ParceirosWholesale {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.containerParceirosWholesale {
+    margin-top: 30px;
+}
+
