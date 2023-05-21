@@ -29,5 +29,20 @@ Route::get('/home/faq',[TelecallController::class,'faq']);
 
 Route::get('/home/carreiras',[TelecallController::class,'carreiras']);
 
+Route::get('/error',[TelecallController::class,'error']);
+
+Route::post('/error',[TelecallController::class,'storeFaleConosco']);
+
+Route::post('/welcome/entraremosemcontato',[TelecallController::class,'storeFaleConosco']);
+
+Route::get('/entraremosemcontato',[TelecallController::class,'entraremosEmContato']);
+
+Route::get('/campovazio',[TelecallController::class,'campoVazio']);
+
+Route::post('/campovazio',[TelecallController::class,'storeFaleConosco']);
+
+Route::get('/errors2',[TelecallController::class,'errors2']);
+
+Route::post('/errors2',[TelecallController::class,'storeFaleConosco']);
 
 

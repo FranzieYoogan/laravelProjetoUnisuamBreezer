@@ -1,8 +1,10 @@
 @extends('layouts.home')
 
+@section('title','CamposVazios')
+    
+
 @section('content')
-@section('title', 'home')
-'
+    
 
 <main>
 
@@ -432,7 +434,7 @@
                     </section>
 
 
-                    <form action="/welcome" method="POST" class="container d-flex justify-content-center gap-5">
+                    <form action="/errors2" method="POST" class="container d-flex justify-content-center gap-5">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
 
                         @csrf
@@ -504,14 +506,12 @@
 
                             </div>
 
-                             
-                                    
+
                             
-                              
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
-                                
-                                
+
+                                <p style="color: red;">Preencha o campo e confirme!!</p>
                         </div>
 
                         <div class="containerContato2">
@@ -547,3 +547,5 @@
 
 
 @endsection
+
+    

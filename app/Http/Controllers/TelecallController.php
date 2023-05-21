@@ -30,7 +30,7 @@ class TelecallController extends Controller
         
         
         $fale_conosco = new Fale_conosco;
-
+        
         
 
 
@@ -41,14 +41,46 @@ class TelecallController extends Controller
         $fale_conosco->mensagem = $request->mensagem;
         $fale_conosco->checkbox = $request->checkbox;
 
-        if($request->checkbox != '') {
+        if($request->checkbox && $request->nome  && $request->empresa  && 
+        $request->telefone  && $request->email  && $request->mensagem   ) {
             $fale_conosco->save(); 
-            return " <h1 style='color: green;'>Entraremos em contato! </h1>";
-        } else {
-            
-            return '<h1 style="color: red;">Você não confirmou</h1>';
+            return redirect('/entraremosemcontato');
         
+        
+        } elseif($request->checkbox != '' && (!$request->nome || !$request->empresa|| 
+        !$request->telefone || !$request->email || !$request->mensagem) ){
+           
+            return redirect('/campovazio');
+
         }
+     
+
+        elseif(!$request->checkbox && ($request->nome || $request->empresa|| 
+        $request->telefone || $request->email || $request->mensagem)) {
+            return redirect('/error');
+
+        }
+        elseif(!$request->checkbox && (!$request->nome || !$request->empresa|| 
+        !$request->telefone || !$request->email || !$request->mensagem) ) {
+            return redirect('/errors2');
+        }
+    
+    }
+
+    public function error() {
+        return view('error');
+    }
+
+    public function errors2() {
+        return view('errors2');
+    }
+
+    public function campoVazio() {
+        return view('campoVazio');
+    }
+
+    public function entraremosEmContato() {
+        return view('entraremosemcontato');
     }
 
     public function wholesale() {
