@@ -2,7 +2,7 @@
 
 @section('content')
 @section('title', 'home')
-'
+
 
 <main>
 
@@ -19,20 +19,20 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://bbl245.p3cdn1.secureserver.net/wp-content/uploads/2022/10/PABX2.png?time=1680795724"
+                <img src="{{asset('img/index/pabx2.png')}}"
                     class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://bbl245.p3cdn1.secureserver.net/wp-content/uploads/2022/10/INTERNET-DEDICADA.png?time=1680795724"
+                <img src="{{asset('img/index/internet-dedicada.png')}}"
                     class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://bbl245.p3cdn1.secureserver.net/wp-content/uploads/2022/10/CEL-EMPRESARIAL-2-1.png?time=1680795724"
+                <img src="{{asset('img/index/CEL-EMPRESARIAL-2-1.png')}}"
                     class="d-block w-100" alt="...">
             </div>
 
             <div class="carousel-item">
-                <img src="https://bbl245.p3cdn1.secureserver.net/wp-content/uploads/2022/10/banner-cel-empresarial-telecall-min.png?time=1680795724"
+                <img src="{{asset('img/index/banner-cel-empresarial-telecall-min.png')}}"
                     class="d-block w-100" alt="...">
             </div>
         </div>
@@ -537,7 +537,7 @@
                                 Wpp: (21)93618-0100</p>
                             <h4>Carreiras</h4>
                             <p>
-                                <a href="">Clique aqui</a> para verificar as vagas disponíveis.
+                                <a href="/home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
                             </p>
                         </div>
                     </form>

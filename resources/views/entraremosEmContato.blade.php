@@ -536,7 +536,7 @@
                                 Wpp: (21)93618-0100</p>
                             <h4>Carreiras</h4>
                             <p>
-                                <a href="">Clique aqui</a> para verificar as vagas disponíveis.
+                                <a href="home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
                             </p>
                         </div>
                     </form>
