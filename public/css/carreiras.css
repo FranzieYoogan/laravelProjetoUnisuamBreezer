@@ -16,7 +16,7 @@
 }
 
 .linkCarreiras {
-    display: inline;
+    
     float: right;
    margin-left: 20px;
    
@@ -26,8 +26,8 @@
 
 .containerListaCarreiras {
     margin-top: 30px;
-    width: 670px;
-    max-width: 100%;
+    width: 800px;
+    max-width: auto;
     object-fit: cover;
    
 }
@@ -175,3 +175,7 @@
     
 }
 
+.navPositioning {
+    display: flex;
+    justify-content: end;
+}

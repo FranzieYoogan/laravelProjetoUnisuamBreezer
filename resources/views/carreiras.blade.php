@@ -36,13 +36,13 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="{{ asset('img/carreiras/loginLogo.png') }}"
-                    alt="" width="200px" /></a>
+            <a class="navbar-brand" href="/"><img src="{{ asset('img/carreiras/loginLogo.png') }}" alt=""
+                    width="200px" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse navPositioning" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary botaoCarreirasEntrar"
                         tabindex="-1" role="button" aria-disabled="true">Entrar</a>
@@ -52,7 +52,7 @@
     </nav>
 
     <div class="container containerCarreiras2 d-flex justify-content-center w-auto">
-        <div class="containerListaCarreiras " style="width: 900px;">
+        <div class="containerListaCarreiras " >
             <ul class="list-group listaCarreiras2 form-control w-auto">
 
 
@@ -63,157 +63,156 @@
                             {{ $carreirasCount }} Vagas Abertas
 
                             <form action="/home/carreiras" method="GET">
-                            <div class="d-flex gap-3 w-auto" >
+                                <div class="d-flex gap-3 w-auto">
 
 
-                               
-                                <input class="form-control-lg searchCarreiras  wp-auto" type="search" id="query" name="query"
-                                    placeholder="Buscar Vaga" aria-label=".form-control-lg example"/>
 
-                                
-                                
+                                    <input class="form-control-lg searchCarreiras  wp-auto" type="search"
+                                        id="query" name="query" placeholder="Buscar Vaga"
+                                        aria-label=".form-control-lg example" />
+
+
+
                             </form>
-                            </div>
-
-                        </h1>
-                        <!-- </div> -->
-
-
-                    </li>
                 </div>
 
-                
-                <li class="list-group-item listaCarreiras ">
-                    
-                    @foreach ($carreiras as $carreira)
-                    
-                <li class="list-group-item" style="display: inline;">
-                    
-                    <div class="divLista w-auto">
-                        <h1 class="tituloListaCarreiras">
-                            {{ $carreira->vagas_nome }}
-                        </h1>
-                        <p class="text-center pLista">{{ $carreira->local }}</p>
-                        <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras" tabindex="-1"
-                            role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i> Cadastrar</a><a
-                            href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras"
-                            tabindex="-1" role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i>
-                            {{$carreira->vagas_quantidade}} VAGAS</a>
-                            
-                    </div>
-                    
+                </h1>
+                <!-- </div> -->
+
+
                 </li>
-                
-                @endforeach
-
-               
-
-
-
-            </ul>
         </div>
-        <div class="col w-auto" style="margin-left: 20px">
-            <h1 class="tituloRhTelecall container">RH Telecall</h1>
 
-            <p class="container tituloRhTelecall2">Sua Escolha Inteligente</p>
 
-            <div class="ratio ratio-16x9 w-auto">
-                <iframe class="video" src="https://www.youtube.com/embed/Z4N6-XZY7V0" title="YouTube video"
-                    allowfullscreen></iframe>
+        <li class="list-group-item listaCarreiras ">
+
+            @foreach ($carreiras as $carreira)
+        <li class="list-group-item">
+
+            <div class="divLista w-auto">
+                <h1 class="tituloListaCarreiras">
+                    {{ $carreira->vagas_nome }}
+                </h1>
+                <p class="text-center pLista">{{ $carreira->local }}</p>
+                <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras" tabindex="-1"
+                    role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i> Cadastrar</a>
+                <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras" tabindex="-1"
+                    role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i>
+                    {{ $carreira->vagas_quantidade }} VAGAS</a>
+
             </div>
 
-            <p class="pCarreiras container">A Telecall é uma operadora de telecomunicações brasileira que oferece a
-                seus
-                clientes o mais
-                alto padrão de qualidade, velocidade e acessibilidade em soluções de comunicação.
-                Com mais de 20 anos de experiência na indústria global, a Telecall hoje é sinônimo de
-                qualidade e eficiência. A Telecall está sediada no Brasil, com escritórios em Miami,
-                Portugal e Inglaterra.</p>
+        </li>
+        @endforeach
 
 
-            <div class="containerRedes container">
-                <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
-                <i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i>
-                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>
-                <i class="fab fa-youtube fa-2x" style="color: #ed302f;"></i>
-            </div>
 
 
-            <h6 class="depoimentos container w-auto">Depoimentos</h6>
 
-            <div class="container containerCarrossel">
-                <h2 class="font-weight-light"></h2>
-                <div class="row mx-auto my-auto">
-                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="true" data-interval="0"
-                        data-pause="hover">
-                        <div class="carousel-inner w-100" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="col-md-4">
-                                    <div class="card card-body divCarrosselCaption">
-                                        <img class="img-fluid imagemCarrossel"
-                                            src="{{ asset('img/carreiras/depoimentosAlexandre.png') }}">
-                                        <p class="pCarreirasCarrossel">Fazer parte do time da Telecall me traz uma
-                                            gratidão imensa!
-                                            Aqui somos desafiados a cada dia para sermos melhores, vencer
-                                            obstáculos, buscar sonhos e ter coragem para enfrentar
-                                            qualquer batalha! Além de acreditar na cultura e nos valores
-                                            da empresa, tenho muita admiração e orgulho das pessoas que
-                                            trabalham comigo.</p>
-                                        <p class="nomeCarreirasCarrossel">- Alexandre Mendes</p>
-                                    </div>
+        </ul>
+    </div>
+    <div class="col w-auto" style="margin-left: 20px">
+        <h1 class="tituloRhTelecall container">RH Telecall</h1>
+
+        <p class="container tituloRhTelecall2">Sua Escolha Inteligente</p>
+
+        <div class="ratio ratio-16x9 w-auto">
+            <iframe class="video" src="https://www.youtube.com/embed/Z4N6-XZY7V0" title="YouTube video"
+                allowfullscreen></iframe>
+        </div>
+
+        <p class="pCarreiras container">A Telecall é uma operadora de telecomunicações brasileira que oferece a
+            seus
+            clientes o mais
+            alto padrão de qualidade, velocidade e acessibilidade em soluções de comunicação.
+            Com mais de 20 anos de experiência na indústria global, a Telecall hoje é sinônimo de
+            qualidade e eficiência. A Telecall está sediada no Brasil, com escritórios em Miami,
+            Portugal e Inglaterra.</p>
+
+
+        <div class="containerRedes container">
+            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+            <i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i>
+            <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>
+            <i class="fab fa-youtube fa-2x" style="color: #ed302f;"></i>
+        </div>
+
+
+        <h6 class="depoimentos container w-auto">Depoimentos</h6>
+
+        <div class="container containerCarrossel">
+            <h2 class="font-weight-light"></h2>
+            <div class="row mx-auto my-auto">
+                <div id="recipeCarousel" class="carousel slide w-100" data-ride="true" data-interval="0"
+                    data-pause="hover">
+                    <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                <div class="card card-body divCarrosselCaption">
+                                    <img class="img-fluid imagemCarrossel"
+                                        src="{{ asset('img/carreiras/depoimentosAlexandre.png') }}">
+                                    <p class="pCarreirasCarrossel">Fazer parte do time da Telecall me traz uma
+                                        gratidão imensa!
+                                        Aqui somos desafiados a cada dia para sermos melhores, vencer
+                                        obstáculos, buscar sonhos e ter coragem para enfrentar
+                                        qualquer batalha! Além de acreditar na cultura e nos valores
+                                        da empresa, tenho muita admiração e orgulho das pessoas que
+                                        trabalham comigo.</p>
+                                    <p class="nomeCarreirasCarrossel">- Alexandre Mendes</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body divCarrosselCaption">
-                                        <img class="img-fluid imagemCarrossel"
-                                            src="{{ asset('img/carreiras/Rai_de_Azevedo_Almeida.png_name_20220610-14073-1ab1hpc.png') }}">
-                                        <p class="pCarreirasCarrossel">Trabalho na Telecall desde 2013, e
-                                            desde então só tenho á agradecer, pois fui bem acolhida e me sinto
-                                            parte dessa família desde o primeiro dia. Nesses nove anos tive
-                                            oportunidades
-                                            de crescimento e cresci, amadureci com cada aprendizado e quero buscar mais
-                                            conquistas, conhecimentos, sabedoria, me dedicar sempre a vocês Telecall que
-                                            são
-                                            minha segunda família.</p>
-                                        <p class="nomeCarreirasCarrossel">- Rai Almeida, Assistente Administrativo</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="col-md-4 ">
-                                    <div class="card card-body divCarrosselCaption">
-                                        <img class="img-fluid imagemCarrossel"
-                                            src="{{ asset('img/carreiras/Jandira_Costa_de_Oliveira_Cruz.png_name_20220610-14073-l0zs1g.png') }}">
-                                        <p class="pCarreirasCarrossel">Trabalhar na Telecall é ser reconhecida não só
-                                            pelo seu gestor,
-                                            mas também pela diretoria, que nos trata como família. Cada dia é um desafio
-                                            e uma aprendizagem
-                                            e nos esforçamos para fazer a diferença. Somar sempre!!</p>
-                                        <p class="nomeCarreirasCarrossel">- Jandira Costa, Analista Fiscal</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                        <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
-                                aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
-                                aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card card-body divCarrosselCaption">
+                                    <img class="img-fluid imagemCarrossel"
+                                        src="{{ asset('img/carreiras/Rai_de_Azevedo_Almeida.png_name_20220610-14073-1ab1hpc.png') }}">
+                                    <p class="pCarreirasCarrossel">Trabalho na Telecall desde 2013, e
+                                        desde então só tenho á agradecer, pois fui bem acolhida e me sinto
+                                        parte dessa família desde o primeiro dia. Nesses nove anos tive
+                                        oportunidades
+                                        de crescimento e cresci, amadureci com cada aprendizado e quero buscar mais
+                                        conquistas, conhecimentos, sabedoria, me dedicar sempre a vocês Telecall que
+                                        são
+                                        minha segunda família.</p>
+                                    <p class="nomeCarreirasCarrossel">- Rai Almeida, Assistente Administrativo</p>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="carousel-item">
+                            <div class="col-md-4 ">
+                                <div class="card card-body divCarrosselCaption">
+                                    <img class="img-fluid imagemCarrossel"
+                                        src="{{ asset('img/carreiras/Jandira_Costa_de_Oliveira_Cruz.png_name_20220610-14073-l0zs1g.png') }}">
+                                    <p class="pCarreirasCarrossel">Trabalhar na Telecall é ser reconhecida não só
+                                        pelo seu gestor,
+                                        mas também pela diretoria, que nos trata como família. Cada dia é um desafio
+                                        e uma aprendizagem
+                                        e nos esforçamos para fazer a diferença. Somar sempre!!</p>
+                                    <p class="nomeCarreirasCarrossel">- Jandira Costa, Analista Fiscal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
+
         </div>
+    </div>
     </div>
 
     <footer class="py-2 my-4">
