@@ -1,0 +1,177 @@
+.botaoCarreirasEntrar {
+    padding: 10px 100px 10px 100px;
+    background-color: transparent;
+    color: rgb(39, 99, 168);;
+    border: solid 2px rgb(39, 99, 168);;
+}
+
+
+
+.listaCarreiras {
+    background-color: rgb(243, 243, 243);
+}
+
+.divListaUltima {
+    margin-bottom: 20px;
+}
+
+.linkCarreiras {
+    display: inline;
+    float: right;
+   margin-left: 20px;
+   
+   
+    
+}
+
+.containerListaCarreiras {
+    margin-top: 30px;
+    width: 670px;
+    max-width: 100%;
+    object-fit: cover;
+   
+}
+
+.containerCarreiras2 {
+    margin-top: 20px;
+    
+}
+
+.tituloListaCarreiras {
+    
+    font-size: 15px;
+    
+    
+    width: 100%;
+    
+    
+  
+    
+    
+}
+
+.divLista {
+    display: inline
+}
+
+.pLista {
+    text-align: center;
+    display: inline;
+    width: 100%;
+}
+
+.searchCarreiras {
+    
+    display: inline;
+    height: 50px;
+    
+    background-image: url(/img/carreiras/searchIcon.svg) ;
+    background-size: 25px;
+    background-position-y: 10px;
+    background-position-x: 165px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    
+    
+    
+   
+    
+    
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    
+    
+}
+
+.tituloListaVagas {
+    font-size: 30px;
+    text-align: left;
+}
+
+.selectCarreiras {
+    display: inline;
+    width: auto;
+    object-fit: contain;
+    
+    height: 50px;
+    
+}
+
+.tituloRhTelecall {
+   margin-top: 25px;
+}
+
+.tituloRhTelecall2 {
+    font-style: italic;
+}
+
+.video {
+    border-radius: 20px;
+    width: 250px;
+}
+
+.pCarreiras {
+    width: 250px;
+    max-width: 100%;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.containerRedes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.depoimentos {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divCarrosselCaption {
+    width: 200px;
+}
+
+.pCarreirasCarrossel {
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.liSpan {
+   font-size: 12rem;
+   content: "";
+   
+}
+
+.nomeCarreirasCarrossel {
+    font-weight: bold;
+    text-align: right;
+    font-size: 10px;
+}
+
+.containerCarrossel {
+    margin-bottom: 30px;
+    width: 270px;
+    max-width: 100%;
+}
+
+.imagemCarrossel {
+    width: 150px;
+}
+
+.tituloListaVagas {
+    text-align: center;
+}
+
+.footerA {
+    
+    text-align: center;
+    
+}
+
+.afooter {
+    margin: 0 20px;
+    
+}
+

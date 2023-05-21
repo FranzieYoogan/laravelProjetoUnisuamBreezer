@@ -1,0 +1,44 @@
+.imagemOverlay {
+    padding-top: 150px;
+}
+
+.tituloInstitucional {
+    color: white;
+}
+
+.pInstitucional {
+    width: 13%;
+    border-bottom: red solid 2px;
+}
+
+.scrollspy-example {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+  }
+
+  .linhaTempo {
+    margin-left: 20px;
+  }
+
+
+  .containerInstitucional1 {
+    margin-left: 5px;
+  }
+
+  .linkInstitucional.active  { 
+    color: red !important; 
+    
+    
+
+}
+
+
+  .containerTotal {
+    margin: 40px 20px 0 0;
+  }
+  
+  .containerScrollspy {
+    border: solid 2px black;
+    
+  }

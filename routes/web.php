@@ -21,4 +21,13 @@ Route::get('/',[TelecallController::class,'index']);
 
 Route::post('/welcome',[TelecallController::class,'storeFaleConosco']);
 
-Route::get('home/wholesale',[TelecallController::class,'wholesale']);
+Route::get('/home/wholesale',[TelecallController::class,'wholesale']);
+
+Route::get('/home/institucional',[TelecallController::class,'institucional']);
+
+Route::get('/home/faq',[TelecallController::class,'faq']);
+
+Route::get('/home/carreiras',[TelecallController::class,'carreiras']);
+
+
+

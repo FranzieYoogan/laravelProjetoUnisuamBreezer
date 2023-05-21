@@ -68,7 +68,7 @@ rel="stylesheet"
                         ariaCurrentWhenActive="page">Wholesale</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="">Institucional</a>
+                      <a class="nav-link" href="/home/institucional">Institucional</a>
                     </li>
                   </ul>
           
@@ -83,11 +83,11 @@ rel="stylesheet"
                           class="fa-brands fa-whatsapp"></i> whatsapp</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link " href=""><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                      <a class="nav-link " href="/home/faq"><i class="fa-solid fa-circle-question"></i> FAQ</a>
                     </li>
           
                     <li class="nav-item">
-                      <a class="nav-link " href=""><i class="fa-solid fa-user-tie"></i> Carreiras</a>
+                      <a class="nav-link " href="/home/carreiras"><i class="fa-solid fa-user-tie"></i> Carreiras</a>
                     </li>
           
                     <li class="nav-item">
