@@ -41,17 +41,23 @@ class TelecallController extends Controller
         $fale_conosco->mensagem = $request->mensagem;
         $fale_conosco->checkbox = $request->checkbox;
 
-        if($request->checkbox && $request->nome  && $request->empresa  && 
-        $request->telefone  && $request->email  && $request->mensagem   ) {
+        if($request->checkbox && $request  && $request->nome && $request->nome != $fale_conosco->nome  && 
+        $request->empresa && $request->empresa != $fale_conosco->empresa   && 
+        $request->telefone && $request->telefone != $fale_conosco->telefone && $request->email && 
+        $request->email != $fale_conosco->email   && $request->mensagem   ) {
             $fale_conosco->save(); 
             return redirect('/entraremosemcontato');
         
-        
-        } elseif($request->checkbox != '' && (!$request->nome || !$request->empresa|| 
+        }
+        elseif($request->checkbox && (!$request->nome || !$request->empresa|| 
         !$request->telefone || !$request->email || !$request->mensagem) ){
            
             return redirect('/campovazio');
 
+        }
+        elseif(!$request->checkbox && (!$request->nome || !$request->empresa|| 
+        !$request->telefone || !$request->email || !$request->mensagem) ) {
+            return redirect('/errors2');
         }
      
 
@@ -60,12 +66,16 @@ class TelecallController extends Controller
             return redirect('/error');
 
         }
-        elseif(!$request->checkbox && (!$request->nome || !$request->empresa|| 
-        !$request->telefone || !$request->email || !$request->mensagem) ) {
-            return redirect('/errors2');
-        }
+       
+           
+     elseif(($fale_conosco->nome == $request->nome || $fale_conosco->empresa == $request->empresa
+    || $fale_conosco->telefone == $request->telefone || $fale_conosco->email == $request->email)) {
+        return redirect('/dadosexistentes');
+
+    
     
     }
+}
 
     public function error() {
         return view('error');
@@ -73,6 +83,10 @@ class TelecallController extends Controller
 
     public function errors2() {
         return view('errors2');
+    }
+
+    public function dadosExistentes() {
+        return view ('dadosexistentes');
     }
 
     public function campoVazio() {

@@ -33,7 +33,7 @@ Route::get('/error',[TelecallController::class,'error']);
 
 Route::post('/error',[TelecallController::class,'storeFaleConosco']);
 
-Route::post('/welcome/entraremosemcontato',[TelecallController::class,'storeFaleConosco']);
+Route::post('/entraremosemcontato',[TelecallController::class,'storeFaleConosco']);
 
 Route::get('/entraremosemcontato',[TelecallController::class,'entraremosEmContato']);
 
@@ -45,4 +45,7 @@ Route::get('/errors2',[TelecallController::class,'errors2']);
 
 Route::post('/errors2',[TelecallController::class,'storeFaleConosco']);
 
+Route::get('/dadosexistentes',[TelecallController::class,'dadosExistentes']);
+
+Route::post('/dadosexistentes',[TelecallController::class,'storeFaleConosco']);
 
