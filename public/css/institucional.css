@@ -1,15 +1,19 @@
 .imagemOverlay {
     /* padding-top: 150px; */
-  position:absolute;
-    top: 10em;
-    object-fit: cover;
+  position: absolute;
+  margin-top: 10em;
+    box-sizing: border-box;
 }
 
 .tituloInstitucional {
+  display: flex;
+
     color: white;
 }
 
 .pInstitucional {
+  display: flex;
+
     width: 13%;
     border-bottom: red solid 2px;
 }

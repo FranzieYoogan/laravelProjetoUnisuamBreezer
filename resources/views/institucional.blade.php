@@ -4,14 +4,21 @@
 @section('content')
     
 <link rel="stylesheet" href="/css/institucional.css">
-<div class="card text-bg-dark">
+<div class="card text-bg-dark ">
     <img src="{{asset('img/institucional/pexels-sevenstorm-juhaszimrus-443383.jpg')}}" class="card-img" alt="..." height="300px">
     <div class="card-img-overlay imagemOverlay">
-      <h1 class="card-title tituloInstitucional">Telecall</h1>
-      <p class="card-text pInstitucional">Sua escolha inteligente</p>
       
-    </div>
+      
+      
+        
+      <h1 class="card-title tituloInstitucional">Telecall</h1>
+      
+      
+      <p class="card-text pInstitucional">Sua escolha inteligente</p>
+    
   </div>
+    </div>
+ 
 
 
 
