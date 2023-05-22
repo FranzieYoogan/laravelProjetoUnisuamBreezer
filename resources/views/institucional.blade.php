@@ -122,12 +122,12 @@
     <div id="scrollspy1" class="sticky-top " style="padding: 10px;">
       <ul class="nav flex-column nav-pills menu-sidebar">
         <li class="nav-item">
-          <a href="/home/institucional/#example-1"   class="nav-link linkInstitucional active"    style="font-size: 15px; ">Sobre a Empresa</a>
+          <a href="/home/institucional/#example-1"   class="nav-link linkInstitucional"    style="font-size: 15px; ">Sobre a Empresa</a>
         
         
         </li>
         <li class="nav-item">
-          <a class="nav-link linkInstitucional active "  href="/home/institucional/#example-2"   style="font-size: 15px; ">Linha do Tempo</a>
+          <a class="nav-link linkInstitucional"  href="/home/institucional/#example-2"   style="font-size: 15px; ">Linha do Tempo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link linkInstitucional" href="/home/institucional/#example-3" style="font-size: 15px; ">Missão, Visão e Valores</a>

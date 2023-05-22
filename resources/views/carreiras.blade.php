@@ -51,7 +51,7 @@
         </div>
     </nav>
 
-    <div class="container containerCarreiras2 d-flex justify-content-center w-auto">
+    <div class="container containerCarreiras2 d-flex justify-content-center gap-5 w-auto">
         <div class="containerListaCarreiras " >
             <ul class="list-group listaCarreiras2 form-control w-auto">
 
@@ -90,17 +90,22 @@
         <li class="list-group-item">
 
             <div class="divLista w-auto">
+                <div class="divLista2">
+                <div class="divListaTexto">
                 <h1 class="tituloListaCarreiras">
                     {{ $carreira->vagas_nome }}
                 </h1>
                 <p class="text-center pLista">{{ $carreira->local }}</p>
+            </div>
+            <div class="divListaLinks">
                 <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras" tabindex="-1"
                     role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i> Cadastrar</a>
                 <a href="https://auth.solides.jobs/sign-in" class="btn btn-primary linkCarreiras" tabindex="-1"
                     role="button" aria-disabled="true"><i class="fa-solid fa-briefcase"></i>
                     {{ $carreira->vagas_quantidade }} VAGAS</a>
-
+                </div>
             </div>
+        </div>
 
         </li>
         @endforeach
@@ -111,7 +116,7 @@
 
         </ul>
     </div>
-    <div class="col w-auto" style="margin-left: 20px">
+    <div class="col w-auto" >
         <h1 class="tituloRhTelecall container">RH Telecall</h1>
 
         <p class="container tituloRhTelecall2">Sua Escolha Inteligente</p>

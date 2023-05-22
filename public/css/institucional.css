@@ -1,5 +1,8 @@
 .imagemOverlay {
-    padding-top: 150px;
+    /* padding-top: 150px; */
+  position:absolute;
+    top: 10em;
+    object-fit: cover;
 }
 
 .tituloInstitucional {

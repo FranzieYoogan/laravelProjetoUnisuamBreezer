@@ -15,14 +15,7 @@
     margin-bottom: 20px;
 }
 
-.linkCarreiras {
-    
-    float: right;
-   margin-left: 20px;
-   
-   
-    
-}
+
 
 .containerListaCarreiras {
     margin-top: 30px;
@@ -42,7 +35,7 @@
     font-size: 15px;
     
     
-    width: 100%;
+    width: auto;
     
     
   
@@ -51,7 +44,32 @@
 }
 
 .divLista {
-    display: inline
+    
+}
+
+.divLista2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divListaLinks {
+
+    justify-content: end;
+    width: auto;
+    
+}
+
+.divListaTexto {
+    text-align: left;
+    width: auto;
+    object-fit: contain;
+    
+}
+
+.linkCarreiras {
+    
+margin: 0 5px;
+  
 }
 
 .pLista {
@@ -179,3 +197,4 @@
     display: flex;
     justify-content: end;
 }
+
