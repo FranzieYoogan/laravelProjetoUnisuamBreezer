@@ -49,3 +49,28 @@ Route::get('/dadosexistentes',[TelecallController::class,'dadosExistentes']);
 
 Route::post('/dadosexistentes',[TelecallController::class,'storeFaleConosco']);
 
+Route::get('/contato',[TelecallController::class,'contato']);
+
+Route::post('/contato',[TelecallController::class,'storeContato']);
+
+Route::get('/dadosexistentescontato',[TelecallController::class,'dadosExistentesContato']);
+
+Route::post('/dadosexistentescontato',[TelecallController::class,'storeContato']);
+
+Route::get('/entraremosemcontatocontato',[TelecallController::class,'entraremosEmContatoContato']);
+
+Route::post('/entraremosemcontatocontato',[TelecallController::class,'storeContato']);
+
+Route::get('/errorcontato',[TelecallController::class,'errorContato']);
+
+Route::post('/errorcontato',[TelecallController::class,'storeContato']);
+
+Route::get('/errors2contato',[TelecallController::class,'errors2Contato']);
+
+Route::post('/errors2contato',[TelecallController::class,'storeContato']);
+
+Route::get('/campovaziocontato',[TelecallController::class,'campoVazioContato']);
+
+Route::post('/campovaziocontato',[TelecallController::class,'storeContato']);
+
+

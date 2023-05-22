@@ -1,0 +1,157 @@
+.imagemContatoContainer {
+  
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size:cover ;
+}
+
+.imagemContato {
+    height: 300px;
+    opacity: 0.6;
+}
+
+.textoImagem {
+    color: rgb(39, 99, 168);
+    
+    
+    
+}
+
+.hTitulo {
+    display: flex;
+    width: auto;
+    align-items: end;
+    font-weight: bold;
+    font-size: 50px;
+    border-bottom: solid 2px white;
+}
+
+.h1tituloContainer {
+    width: 50%;
+    
+}
+
+.containerTelefone1 {
+    
+    background-color: rgb(39, 99, 168) ;
+    width: 70%;
+    padding: 0 200px 0 0;
+    border: solid 2px black;
+    
+}
+
+.containerTelefonePrincipal {
+   
+}
+
+.containerTelefone2 {
+    margin-top: 20px;
+  background-color: white;
+  width: 70%;
+  padding: 0 200px 0 0;
+  border: solid 2px black;
+}
+
+.containerEmail {
+    margin-top: 20px;
+    width: 70%;
+    border: solid 2px black;
+}
+
+.pEmail {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.pEmailTitulo {
+    
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(39, 99, 168);
+    
+}
+
+.containerEscritorios {
+    margin-top: 20px;
+    border: solid 2px black;
+    width: 70%;
+}
+
+.pEscritorios {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.pTituloEscritorios {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(39, 99, 168) ;
+}
+
+.linkTelefone {
+    color: black;
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.linkTelefone:hover {
+    color: rgb(39, 99, 168) ;
+}
+
+.pTelefone1 {
+    color: white;
+    margin: 20px 0 0 20px;
+    width: 300px;
+}
+
+.h1Telefone {
+    color: white;
+    margin: 20px 0 20px 20px;
+}
+
+.containerPrincipal {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: auto;
+    
+    
+    
+}
+
+.containerPrincipal2 {
+    
+    width: 100%;
+    
+}
+
+.containerForm {
+    margin-top: 70px;
+    width: auto;
+    
+}
+
+.inputEmail {
+    border: solid 2px black;
+}
+
+.formEdit {
+    color: red;
+    width: 250px;
+    border: solid 2px black;
+}
+
+.selectEdit {
+    margin-bottom: 20px;
+}
+
+.checkboxEdit {
+    margin-bottom: 20px;
+}
+
+.botaoEnviar {
+    padding: 10px 100px;
+}

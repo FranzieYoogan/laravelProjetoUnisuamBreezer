@@ -88,7 +88,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " href=""><i class="fa-solid fa-address-book"></i> Contato</a>
+                                <a class="nav-link " href="/contato"><i class="fa-solid fa-address-book"></i> Contato</a>
                             </li>
 
                             <li class="nav-item">

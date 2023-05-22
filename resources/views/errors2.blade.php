@@ -1,7 +1,6 @@
 @extends('layouts.home')
 
-@section('title','CamposVazios')
-    
+@section('title','entraremosEmContato')
 
 @section('content')
     
@@ -434,7 +433,7 @@
                     </section>
 
 
-                    <form action="/errors2" method="POST" class="container d-flex justify-content-center gap-5">
+                    <form action="/entraremosemcontato" method="POST" class="container d-flex justify-content-center gap-5">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
 
                         @csrf
@@ -498,10 +497,8 @@
 
                             <div class="form-check d-flex justify-content-lg-start mb-4">
 
-                                <input class="form-check-input" type="checkbox" value="checked"
-                                     id="checkbox"
-                                    name="checkbox" />
-                                <label class="form-check-label" for="checkbox">Confirmar </label>
+                                <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox">
+                                <label class="form-check-label" for="checkbox" value="checked">Confirmar</label>
                                
 
                             </div>
@@ -511,7 +508,7 @@
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
 
-                                <p style="color: red;">Preencha o campo e confirme!!</p>
+                                <p style="color: red;">Confirme e preencha o  campo!!</p>
                         </div>
 
                         <div class="containerContato2">
@@ -537,7 +534,7 @@
                                 Wpp: (21)93618-0100</p>
                             <h4>Carreiras</h4>
                             <p>
-                                <a href="/home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
+                                <a href="home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
                             </p>
                         </div>
                     </form>
@@ -547,5 +544,7 @@
 
 
 @endsection
+
+    
 
     

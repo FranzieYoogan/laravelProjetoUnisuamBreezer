@@ -85,6 +85,7 @@ class TelecallController extends Controller
             
           }
         }
+
     
 
 
@@ -116,6 +117,86 @@ class TelecallController extends Controller
     {
         return view('entraremosemcontato');
     }
+
+    public function storeContato(Request $request) {
+        $fale_conosco = new Fale_conosco;
+
+        $select = $_POST["tipo_suporte"];
+
+
+    $fale_conosco->nome = $request->nome;
+    $fale_conosco->empresa = $request->empresa;
+    $fale_conosco->telefone = $request->telefone;
+    $fale_conosco->tipo_suporte = $request->tipo_suporte;
+    $fale_conosco->email = $request->email;
+    $fale_conosco->mensagem = $request->mensagem;
+    $fale_conosco->checkbox = $request->checkbox;
+
+    if ((Fale_conosco::where('nome',$request->nome)->exists()) OR
+     (Fale_conosco::where('empresa',$request->empresa)->exists()) 
+     OR (Fale_conosco::where('telefone',$request->telefone)->exists()) 
+     OR (Fale_conosco::where('email',$request->email)->exists()) 
+      )
+        
+     {
+       
+        return redirect('/dadosexistentescontato');
+     
+       
+    } elseif (
+        $request->checkbox and (!$request->nome or !$request->empresa or
+            !$request->telefone or !$request->email or !$request->mensagem 
+            or !$request->tipo_suporte)
+    ) {
+
+        return redirect('/campovaziocontato');
+
+    } elseif (
+        !$request->checkbox and (!$request->nome or !$request->empresa or
+            !$request->telefone or !$request->email or !$request->mensagem or !$request->tipo_suporte)
+    ) {
+        return redirect('/errors2contato');
+    } elseif (
+        !$request->checkbox and ($request->nome or $request->empresa or
+            $request->telefone or $request->email or $request->mensagem or $request->tipo_suporte)
+    ) {
+        return redirect('/errorcontato');
+
+     } elseif(($request->checkbox) and ($request->nome)  and
+     ($request->empresa) and 
+     ($request->telefone) and   ($request->email) 
+      and ($request->mensagem) and ($select != ''))  {
+
+        $fale_conosco->save();
+        return redirect('/entraremosemcontatocontato');
+      
+         
+        
+      }
+    }
+
+    public function dadosExistentesContato() {
+        return view('dadosexistentescontato');
+    }
+
+    public function entraremosEmContatoContato() {
+        return view('entraremosemcontatocontato');
+    }
+
+    public function errorContato() {
+        return view('errorcontato');
+    }
+
+    public function errors2Contato() {
+        return view('errors2contato');
+    }
+
+    public function campoVazioContato() {
+        return view('campovaziocontato');
+    }
+
+
+
 
     public function wholesale()
     {
@@ -164,6 +245,10 @@ class TelecallController extends Controller
 
         return view('carreiras', ['carreiras' => $carreiras, 'carreirasCount' => $carreirasCount, 'search' => $search]);
 
+    }
+
+    public function contato() {
+        return view('contato');
     }
 
 
