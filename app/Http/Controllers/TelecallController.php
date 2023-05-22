@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\cadastro;
 use App\Models\Fale_conosco;
 use App\Models\Vagas_aberta;
 use Dotenv\Parser\Value;
@@ -23,9 +24,14 @@ class TelecallController extends Controller
 
     public function index(Request $request)
     {
+
+           
+
+      
+
         $value = $request->input('checkbox');
 
-        return view('welcome', ['value' => $value]);
+        return view('welcome', ['value' => $value,'request'=>$request]); 
     }
 
     public function storeFaleConosco(Request $request)
@@ -127,10 +133,10 @@ class TelecallController extends Controller
     $fale_conosco->nome = $request->nome;
     $fale_conosco->empresa = $request->empresa;
     $fale_conosco->telefone = $request->telefone;
-    $fale_conosco->tipo_suporte = $request->tipo_suporte;
     $fale_conosco->email = $request->email;
     $fale_conosco->mensagem = $request->mensagem;
     $fale_conosco->checkbox = $request->checkbox;
+    $fale_conosco->tipo_suporte = $request->tipo_suporte;
 
     if ((Fale_conosco::where('nome',$request->nome)->exists()) OR
      (Fale_conosco::where('empresa',$request->empresa)->exists()) 
@@ -165,7 +171,7 @@ class TelecallController extends Controller
      } elseif(($request->checkbox) and ($request->nome)  and
      ($request->empresa) and 
      ($request->telefone) and   ($request->email) 
-      and ($request->mensagem) and ($select != ''))  {
+      and ($request->mensagem))  {
 
         $fale_conosco->save();
         return redirect('/entraremosemcontatocontato');
@@ -249,6 +255,42 @@ class TelecallController extends Controller
 
     public function contato() {
         return view('contato');
+    }
+
+    public function login() {
+        return view('login');
+    }
+
+    public function storeLogin(Request $request) {
+
+        $login = new Cadastro;
+       
+        $login->email = $request->email;
+        $login->senha = $request->senha;
+
+    if($login->email != $request->email OR $login->senha != $request->senha OR !$request->email
+    OR !$request->senha) {
+        return redirect('/loginfailed');
+    }elseif($login->email == $request->email AND $login->senha == $request->senha) {
+
+            return redirect('/getlogin');
+
+ 
+}
+    }
+
+public function getLogin() {
+    return view('getlogin');
+}
+
+public function loginFailed() {
+    return view('loginfailed');
+}
+
+    public function storeCadastro() {
+
+        $cadastro = new cadastro;
+
     }
 
 

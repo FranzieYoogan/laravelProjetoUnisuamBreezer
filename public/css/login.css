@@ -1,0 +1,29 @@
+.divLogin {
+    margin-top: 7em;
+}
+
+.bordaLogin {
+    border: solid 2px black;
+    
+}
+
+.afastandoEmail {
+    margin-top: 20px;
+}
+
+.botaoLogin {
+    background-color: #CA1C2A;
+}
+
+.botaoLogin:hover {
+    background-color: black;
+}
+
+.botaoRedes {
+    background-color: #CA1C2A;
+}
+
+.botaoRedes:hover {
+    background-color: black;
+}
+

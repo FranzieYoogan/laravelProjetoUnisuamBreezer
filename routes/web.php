@@ -73,4 +73,16 @@ Route::get('/campovaziocontato',[TelecallController::class,'campoVazioContato'])
 
 Route::post('/campovaziocontato',[TelecallController::class,'storeContato']);
 
+Route::get('/login',[TelecallController::class,'login']);
+
+Route::POST('/login',[TelecallController::class,'storeLogin']);
+
+Route::get('/getlogin',[TelecallController::class,'getLogin']);
+
+Route::POST('/getlogin',[TelecallController::class,'storeLogin']);
+
+Route::get('/loginfailed',[TelecallController::class,'loginFailed']);
+
+Route::POST('/loginfailed',[TelecallController::class,'storeLogin']);
+
 
