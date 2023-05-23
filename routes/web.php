@@ -112,7 +112,7 @@ Route::POST('/cadastrado',[TelecallController::class,'storeCadastrar']);
 
 Route::get('/senhasnaocombinam',[TelecallController::class,'senhasNaoCombinam']);
 
-Route::get('/senhasnaocombinam',[TelecallController::class,'storeCadastrar']);
+Route::POST('/senhasnaocombinam',[TelecallController::class,'storeCadastrar']);
 
 
 

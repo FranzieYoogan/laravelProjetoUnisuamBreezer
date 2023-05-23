@@ -61,7 +61,7 @@
                                     <div class="form-check d-flex justify-content-center mb-5">
                                         <input class="form-check-input me-2" type="checkbox" value="checked"
                                             id="checkbox" name="checkbox" />
-                                        <label class="form-check-label" for="form2Example3">
+                                        <label class="form-check-label" for="checkbox">
                                             Concordo com os termos de serviço <a href="#!">Termos de Serviço</a>
                                         </label>
                                     </div>

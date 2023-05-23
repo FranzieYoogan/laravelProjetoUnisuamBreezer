@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('senha');
             $table->string('senha2');
-            $table->string('checkbox');
+            $table->string('checkbox')->default('x');
         });
     }
 

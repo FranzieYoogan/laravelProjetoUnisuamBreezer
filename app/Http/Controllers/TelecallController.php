@@ -327,7 +327,7 @@ class TelecallController extends Controller
 
     public function storeCadastrar(Request $request)
     {
-
+       
         $cadastrar = new Cadastro;
 
         $cadastrar->nome = $request->nome;
@@ -350,20 +350,24 @@ class TelecallController extends Controller
    
         
 
-        }elseif($request->senha2 !== $request->senha) {
+        }elseif (
+            $request->checkbox and (!$request->nome or
+                !$request->telefone or !$request->email or !$request->senha
+                or !$request->senha2)
+        ) {
+           
+            return  redirect('/campovaziocadastro');
+
+               } elseif ($request->senha2 != $request->senha AND ($request->checkbox) and ($request->nome)
+        and
+        ($request->telefone) and ($request->email)
+        ) {
 
             return redirect('senhasnaocombinam');
         
 
-        } elseif (
-            $request->checkbox and (!$request->nome or
-                !$request->telefone or !$request->email or !$request->senha
-                or $request->senha2)
-        ) {
-
-            return redirect('/campovaziocadastro');
-
-        }elseif (
+        }
+        elseif (
             !$request->checkbox and ($request->nome or
                 $request->telefone or $request->email or $request->senha or $request->senha2)
         ) {
@@ -372,8 +376,9 @@ class TelecallController extends Controller
         } 
 
     elseif (
-        !$request->checkbox and (!$request->nome or
-            !$request->telefone or !$request->email or !$request->senha or !$request->senha2)
+        !$request->checkbox AND (!$request->nome OR
+            !$request->telefone OR !$request->email OR !$request->senha OR !$request->senha2) 
+         
     ) {
         return redirect('/errors2cadastro');
 
@@ -389,7 +394,7 @@ class TelecallController extends Controller
         or (Cadastro::where('senha',
             $request->senha)->exists()) 
             or  (Cadastro::where('senha2',
-            $request->senha2)->exists()) 
+            $request->senha)->exists()) 
     ) {
 
 
@@ -402,6 +407,7 @@ class TelecallController extends Controller
 
     public function cadastrar()
     {
+       
         return view('cadastrar');
     }
 
