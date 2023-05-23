@@ -101,6 +101,22 @@
         <label class="form-check-label" for="checkbox" >Confirmar</label>
       </div>
       <button type="submit" class="btn btn-primary botaoEnviar">Enviar</button>
+      @if (session('msgDadosExistentesContato'))
+          <p class="msgBad">Dados Existentes!!</p>
+      @endif
+
+      @if (session('msgCampoVazioContato'))
+      <p class="msgBad">Campos Vazios!!</p>
+  @endif
+
+  @if (session('msgErrors2Contato'))
+  <p class="msgBad">Confirme e Preencha os Campos!!</p>
+@endif
+
+@if (session('msgEntraremosEmContatoContato'))
+<p class="msgGood">Entraremos em Contato!!</p>
+@endif
+
     </form>
     
 

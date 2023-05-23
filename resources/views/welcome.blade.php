@@ -4,7 +4,7 @@
 @section('content')
 @section('title', 'home')
 
-
+<link rel="stylesheet" href="css/home.css">
 <main>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -442,6 +442,7 @@
 
                         @csrf
                         <div class="">
+                            
                             <div class="container text-center">
                                 <h1 class="tituloContato">Fale Conosco</h1>
 
@@ -515,9 +516,47 @@
                               
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
-                         
                                 
-                        </div>
+                                   
+                                  
+                                    @if (session('msgDadosExistentes'))
+                                        <p class="msgBad">Dados existentes</p>
+                                    @endif
+                             
+                               
+    
+                              
+                                  
+                                    @if (session('msgCampoVazio'))
+                                        <p class="msgBad">Campos Vazios!!</p>
+                                    @endif
+                               
+    
+                            
+    
+                                    @if (session('msgErrors2'))
+                                    <p class="msgBad">Confirme o Campo e Preencha os Campos!!</p>
+                                @endif
+                            
+    
+                           
+    
+                                @if (session('msgError'))
+                                <p class="msgBad">Confirme o campo!!</p>
+                            @endif
+                            
+    
+                                    
+                            @if (session('msgEntraremosEmContato'))
+                            <p class="msgGood">Entraremos em Contato</p>
+                        @endif
+    
+                   
+                
+           
+            </div>
+                                
+                      
 
                         <div class="containerContato2">
                             <h1 class="tituloContato">Escritório</h1>
@@ -545,6 +584,7 @@
                                 <a href="/home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
                             </p>
                         </div>
+                
                     </form>
 
 

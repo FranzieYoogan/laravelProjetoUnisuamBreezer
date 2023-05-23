@@ -64,7 +64,7 @@ class TelecallController extends Controller
                 $request->email)->exists())
         ) {
 
-            return redirect('/dadosexistentes');
+            return redirect('/')->with('msgDadosExistentes','Dados Existentes!!');
 
 
         } elseif (
@@ -72,18 +72,18 @@ class TelecallController extends Controller
                 !$request->telefone or !$request->email or !$request->mensagem)
         ) {
 
-            return redirect('/campovazio');
+            return redirect('/')->with('msgCampoVazio','Campos Vazios!!');
 
         } elseif (
             !$request->checkbox and (!$request->nome or !$request->empresa or
                 !$request->telefone or !$request->email or !$request->mensagem)
         ) {
-            return redirect('/errors2');
+            return redirect('/')->with('msgErrors2','Confirme e Preencha os Campos!!');
         } elseif (
             !$request->checkbox and ($request->nome or $request->empresa or
                 $request->telefone or $request->email or $request->mensagem)
         ) {
-            return redirect('/error');
+            return redirect('/')->with('msgError','Confirme o Campo!!');
 
         } elseif (
             ($request->checkbox) and ($request->nome) and
@@ -93,7 +93,7 @@ class TelecallController extends Controller
         ) {
 
             $fale_conosco->save();
-            return redirect('/entraremosemcontato');
+            return redirect('/')->with('msgEntraremosEmContato','Entraremos em Contato!!');
 
 
 
@@ -158,7 +158,7 @@ class TelecallController extends Controller
                 $request->email)->exists())
         ) {
 
-            return redirect('/dadosexistentescontato');
+            return redirect('/contato')->with('msgDadosExistentesContato','Dados Existentes');
 
 
         } elseif (
@@ -167,18 +167,18 @@ class TelecallController extends Controller
                 or !$request->tipo_suporte)
         ) {
 
-            return redirect('/campovaziocontato');
+            return redirect('/contato')->with('msgCampoVazioContato','Campos Vazios');
 
         } elseif (
             !$request->checkbox and (!$request->nome or !$request->empresa or
                 !$request->telefone or !$request->email or !$request->mensagem or !$request->tipo_suporte)
         ) {
-            return redirect('/errors2contato');
+            return redirect('/contato')->with('msgErrors2Contato','Confirme e Preencha os Campos!!');
         } elseif (
             !$request->checkbox and ($request->nome or $request->empresa or
                 $request->telefone or $request->email or $request->mensagem or $request->tipo_suporte)
         ) {
-            return redirect('/errorcontato');
+            return redirect('/contato')->with('msgErrorContato','Confirme o Campo!!');
 
         } elseif (
             ($request->checkbox) and ($request->nome) and
@@ -188,7 +188,7 @@ class TelecallController extends Controller
         ) {
 
             $fale_conosco->save();
-            return redirect('/entraremosemcontatocontato');
+            return redirect('/contato')->with('msgEntraremosEmContatoContato','Entraremos em contato!!');
 
 
 
@@ -287,43 +287,39 @@ class TelecallController extends Controller
 
         $login = new Cadastro;
 
+       $senha = Cadastro::where('senha',request('senha'))->value('senha');
+        $email = Cadastro::where('email',request('email'))->value('email');
+       
+
         $login->email = $request->email;
         $login->senha = $request->senha;
 
 
-        if (
-            $request->email != $login->email or $request->senha != $login->senha or !$request->email
-            or !$request->senha
-        ) {
-            return redirect('/loginfailed');
+    if (!$request->email OR !$request->senha) {
+
+        return redirect('/login')->with('msgCampoVazioLogin','Campos vazios!!');
+
+}
+    elseif ($email == $request->email and $senha == $request->senha) {
+
+    return redirect('/login')->with('msgLogado','Logado com Sucesso!!');
 
 
-        } elseif ($request->email == $login->email and $request->senha == $login->senha) {
+}
+        elseif($senha != $request->senha or $email != $request->email)
+{
+            return redirect('/login')->with('msgLoginFailed','Campos Incorretos!!');
 
 
-
-            return redirect('/getlogin');
-
-
-        }
-
-
-
+        } 
     }
 
 
 
 
+  
 
-    public function getLogin()
-    {
-        return view('getlogin');
-    }
-
-    public function loginFailed()
-    {
-        return view('loginfailed');
-    }
+  
 
     public function storeCadastrar(Request $request)
     {

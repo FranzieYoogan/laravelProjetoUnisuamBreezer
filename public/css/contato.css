@@ -155,3 +155,28 @@
 .botaoEnviar {
     padding: 10px 100px;
 }
+
+.msgGood {
+    margin-top: 20px;
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    border-radius: 2px;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.msgBad {
+    margin-top: 20px;
+    background-color: #f89499;
+    color: #970808;
+    border: 1px solid #ffa7a7;
+    border-radius: 2px;
+   font-weight: bold;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+
+    
+}
