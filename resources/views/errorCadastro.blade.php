@@ -4,7 +4,7 @@
 @section('content')
 
 <link rel="stylesheet" href="/css/cadastrar.css">
-<section class="min-vh-100" style="margin-top: 50px;">
+<section class="min-vh-100" style="margin: 50px 0;">
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-12 col-xl-11">
