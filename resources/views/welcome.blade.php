@@ -1,5 +1,6 @@
 @extends('layouts.home')
 
+
 @section('content')
 @section('title', 'home')
 
@@ -140,6 +141,9 @@
                                                 <div class="row">
 
                                                     <div class="col-md-4 mb-3">
+                                                       
+
+                                                        
                                                         <div class="card">
                                                             <img class="img-fluid" alt="100%x280"
                                                                 src="{{ asset('img/cardsImages/Expo-ISP-10-12.05.png') }}">
@@ -150,6 +154,7 @@
                                                             </div>
 
                                                         </div>
+                                                        
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <div class="card">

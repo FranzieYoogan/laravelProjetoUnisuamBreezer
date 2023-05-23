@@ -2,14 +2,7 @@
 
 @section('title','LoginFalhou')
 
-@section('content')
-    
-@extends('layouts.home')
-
-@section('title','login')
-
-@section('content')
-    
+@section('content')  
 
 <link rel="stylesheet" href="/css/login.css">
 <section class="vh-100">
@@ -64,7 +57,7 @@
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="submit" class="btn btn-primary btn-lg botaoLogin"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0 " >Não possui uma conta? <a routerLink="/registrar"
+              <p class="small fw-bold mt-2 pt-1 mb-0 " >Não possui uma conta? <a href="/cadastrar"
                   class="link-danger">Registrar-se</a></p>
                   
                   <p style="color: red; margin-top: 20px;">LOGIN INVALIDO!</p>
@@ -83,4 +76,3 @@
     
 @endsection
     
-@endsection

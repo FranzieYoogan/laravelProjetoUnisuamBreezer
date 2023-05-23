@@ -1,0 +1,9 @@
+
+.botaoRegistrar{
+    background-color: #CA1C2A;
+    
+    }
+    
+    .botaoRegistrar:hover {
+        background-color: black;
+    }

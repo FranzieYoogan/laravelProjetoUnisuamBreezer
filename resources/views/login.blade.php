@@ -60,7 +60,7 @@
               <button type="submit" class="btn btn-primary btn-lg botaoLogin"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
 
-              <p class="small fw-bold mt-2 pt-1 mb-0 " >Não possui uma conta? <a routerLink="/registrar"
+              <p class="small fw-bold mt-2 pt-1 mb-0 " >Não possui uma conta? <a href="/cadastrar"
                   class="link-danger">Registrar-se</a></p>
             </div>
   
