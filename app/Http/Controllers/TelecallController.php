@@ -54,8 +54,7 @@ class TelecallController extends Controller
         $fale_conosco->checkbox = $request->checkbox;
 
         if (
-            (Fale_conosco::where('nome',
-                $request->nome)->exists()) or
+            
             (Fale_conosco::where('empresa',
                 $request->empresa)->exists())
             or (Fale_conosco::where('telefone',
@@ -148,8 +147,7 @@ class TelecallController extends Controller
         $fale_conosco->tipo_suporte = $request->tipo_suporte;
 
         if (
-            (Fale_conosco::where('nome',
-                $request->nome)->exists()) or
+            
             (Fale_conosco::where('empresa',
                 $request->empresa)->exists())
             or (Fale_conosco::where('telefone',
@@ -338,7 +336,10 @@ class TelecallController extends Controller
        if( ($request->checkbox) and ($request->nome)
         and
         ($request->telefone) and ($request->email)
-        and ($request->senha) and ($request->senha2 == $request->senha)) {
+        and ($request->senha) and ($request->senha2 == $request->senha) and !(Cadastro::where('email',
+        $request->email)->exists())
+    and !(Cadastro::where('telefone',
+        $request->telefone)->exists())) {
 
             $cadastrar->save();
             return redirect('/cadastrar')->with('msgCadastrado','Cadastrado com Sucesso!!');
@@ -381,16 +382,12 @@ class TelecallController extends Controller
     }
 
     elseif(
-        (Cadastro::where('nome',
-            $request->nome)->exists()) or
+        
         (Cadastro::where('email',
             $request->email)->exists())
         or (Cadastro::where('telefone',
             $request->telefone)->exists())
-        or (Cadastro::where('senha',
-            $request->senha)->exists()) 
-            or  (Cadastro::where('senha2',
-            $request->senha)->exists()) 
+        
     ) {
 
 

@@ -20,7 +20,7 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form flex-fill mb-0">
-                                            <input type="text" pattern="[A-Za-z]+" minlength="8" maxlength="25" id="nome" name="nome" class="form-control" />
+                                            <input type="text" pattern="[A-Z a-z]+" minlength="8" maxlength="25" id="nome" name="nome" class="form-control" />
                                             <label class="form-label" for="nome">Nome</label>
                                         </div>
                                     </div>

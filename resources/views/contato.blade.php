@@ -62,7 +62,7 @@
       @csrf
       <div class="mb-3 ">
         <label for="nome" class="form-label">Nome</label>
-        <input type="text" pattern="[A-Za-z]+" minlength="8" maxlength="25" class="form-control" id="nome" name="nome">
+        <input type="text" pattern="[A-Z a-z]+" minlength="8" maxlength="25" class="form-control" id="nome" name="nome">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
@@ -71,7 +71,7 @@
       </div>
       <div class="mb-3">
         <label for="empresa" class="form-label">Empresa</label>
-        <input type="text" pattern="[A-Za-z]+" minlength="8" maxlength="25" class="form-control" id="empresa" name="empresa">
+        <input type="text" pattern="[A-Z a-z]+" minlength="8" maxlength="25" class="form-control" id="empresa" name="empresa">
       </div>
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
