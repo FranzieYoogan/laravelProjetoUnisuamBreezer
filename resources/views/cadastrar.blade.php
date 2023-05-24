@@ -68,7 +68,34 @@
 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                         <button type="submit" class="btn btn-primary btn-lg botaoRegistrar">Cadastrar</button>
+                                       
                                     </div>
+                                    @if (session('msgCadastrado'))
+                                    <p class="msgGood">Cadastrado com Sucesso!!</p>
+                                @endif
+
+                                @if (session('msgCampoVazioCadastro'))
+                                <p class="msgBad">Campos Vazios!!</p>
+                                    
+                                @endif
+
+                                @if (session('msgSenhasNaoCombinam'))
+                                <p class="msgBad">Os Campos Senhas não são Iguais!!</p>
+                                    
+                                @endif
+
+                                @if (session('msgErrorCadastro'))
+                                <p class="msgBad">Confirme o Campo!!</p>
+                                    
+                                @endif
+
+                                @if (session('msgErrors2Cadastro'))
+                                    <p class="msgBad">Confirme e Preencha os Campos</p>
+                                @endif
+
+                                @if (session('msgDadosExistentesCadastro'))
+                                    <p class="msgBad">Dados Existentes!!</p>
+                                @endif
                                     
                                 
                                 </form>

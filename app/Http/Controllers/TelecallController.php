@@ -341,7 +341,7 @@ class TelecallController extends Controller
         and ($request->senha) and ($request->senha2 == $request->senha)) {
 
             $cadastrar->save();
-            return redirect('/cadastrado');
+            return redirect('/cadastrar')->with('msgCadastrado','Cadastrado com Sucesso!!');
 
    
         
@@ -352,14 +352,14 @@ class TelecallController extends Controller
                 or !$request->senha2)
         ) {
            
-            return  redirect('/campovaziocadastro');
+            return  redirect('/cadastrar')->with('msgCampoVazioCadastro','Campos Vazios');
 
                } elseif ($request->senha2 != $request->senha AND ($request->checkbox) and ($request->nome)
         and
         ($request->telefone) and ($request->email)
         ) {
 
-            return redirect('senhasnaocombinam');
+            return redirect('/cadastrar')->with('msgSenhasNaoCombinam','Os campos senha não são iguais!!');
         
 
         }
@@ -367,7 +367,7 @@ class TelecallController extends Controller
             !$request->checkbox and ($request->nome or
                 $request->telefone or $request->email or $request->senha or $request->senha2)
         ) {
-            return redirect('/errorcadastro');
+            return redirect('/cadastrar')->with('msgErrorCadastro','Confirme o Campo!!');
 
         } 
 
@@ -376,7 +376,7 @@ class TelecallController extends Controller
             !$request->telefone OR !$request->email OR !$request->senha OR !$request->senha2) 
          
     ) {
-        return redirect('/errors2cadastro');
+        return redirect('/cadastrar')->with('msgErrors2Cadastro','Confirme e Preencha os Campos!!');
 
     }
 
@@ -395,7 +395,7 @@ class TelecallController extends Controller
 
 
 
-        return redirect('/dadosexistentescadastro');
+        return redirect('/cadastrar')->with('msgDadosExistentesCadastro','Dados Existentes');
 
 
     }

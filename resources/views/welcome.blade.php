@@ -530,12 +530,11 @@
                                     @if (session('msgCampoVazio'))
                                         <p class="msgBad">Campos Vazios!!</p>
                                     @endif
-                               
-    
-                            
+
+                                
     
                                     @if (session('msgErrors2'))
-                                    <p class="msgBad">Confirme o Campo e Preencha os Campos!!</p>
+                                    <p class="msgBad">Confirme e Preencha os Campos!!</p>
                                 @endif
                             
     

@@ -109,6 +109,10 @@
       <p class="msgBad">Campos Vazios!!</p>
   @endif
 
+  @if (session('msgErrorContato'))
+      <p class="msgBad">Confirme o Campo!!</p>
+  @endif
+
   @if (session('msgErrors2Contato'))
   <p class="msgBad">Confirme e Preencha os Campos!!</p>
 @endif

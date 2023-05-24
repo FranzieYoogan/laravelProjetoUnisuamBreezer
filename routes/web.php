@@ -38,41 +38,10 @@ Route::get('/login',[TelecallController::class,'login']);
 
 Route::POST('/login',[TelecallController::class,'storeLogin']);
 
-Route::get('/getlogin',[TelecallController::class,'getLogin']);
-
-Route::POST('/getlogin',[TelecallController::class,'storeLogin']);
-
-Route::get('/loginfailed',[TelecallController::class,'loginFailed']);
-
-Route::POST('/loginfailed',[TelecallController::class,'storeLogin']);
-
 Route::get('/cadastrar',[TelecallController::class,'cadastrar']);
 
 Route::POST('/cadastrar',[TelecallController::class,'storeCadastrar']);
 
-Route::get('/dadosexistentescadastro',[TelecallController::class,'dadosExistentesCadastro']);
-
-Route::POST('/dadosexistentescadastro',[TelecallController::class,'storeCadastrar']);
-
-Route::get('/campovaziocadastro',[TelecallController::class,'campoVazioCadastro']);
-
-Route::POST('/campovaziocadastro',[TelecallController::class,'storeCadastrar']);
-
-Route::get('/errors2cadastro',[TelecallController::class,'errors2Cadastro']);
-
-Route::POST('/errors2cadastro',[TelecallController::class,'storeCadastrar']);
-
-Route::get('/errorcadastro',[TelecallController::class,'errorCadastro']);
-
-Route::POST('/errorcadastro',[TelecallController::class,'storeCadastrar']);
-
-Route::get('/cadastrado',[TelecallController::class,'cadastrado']);
-
-Route::POST('/cadastrado',[TelecallController::class,'storeCadastrar']);
-
-Route::get('/senhasnaocombinam',[TelecallController::class,'senhasNaoCombinam']);
-
-Route::POST('/senhasnaocombinam',[TelecallController::class,'storeCadastrar']);
 
 
 
