@@ -28,7 +28,7 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form flex-fill mb-0">
-                                            <input type="email" id="email" name="email" class="form-control" />
+                                            <input type="email" pattern=".+@gmail\.com" placeholder="xxxx@gmail.com" id="email" name="email" class="form-control" />
                                             <label class="form-label" for="email">Email</label>
                                         </div>
                                     </div>
@@ -37,7 +37,7 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-sharp fa-solid fa-mobile fa-lg me-3 fa-fw" style="color: #000000;" ></i>
                                         <div class="form flex-fill mb-0" >
-                                            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(+55) xxxx-xxxx" />
+                                            <input type="tel" pattern="[0-9]{2}[0-9]{2}[0-9]{4}[0-9]{4}" id="telefone" name="telefone" class="form-control" placeholder="(+xx) xx-xxxx-xxxx" />
                                             <label class="form-label" for="telefone">Telefone</label>
                                         </div>
                                     </div>

@@ -66,7 +66,7 @@
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        <input type="email" pattern=".+@gmail\.com" placeholder="xxxx@gmail.com" class="form-control" id="email" name="email" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">Nunca iremos compartilhar seu email com outra pessoa</div>
       </div>
       <div class="mb-3">
@@ -75,7 +75,7 @@
       </div>
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
-        <input type="tel" class="form-control" id="telefone" name="telefone">
+        <input type="tel" pattern="[0-9]{2}[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(+xx) xx-xxxx-xxxx" class="form-control" id="telefone" name="telefone">
       </div>
       <div class="mb-3">
         <select class="form-select" id="tipo_suporte" name="tipo_suporte" @required(true) aria-label="Default select example">

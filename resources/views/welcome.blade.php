@@ -473,7 +473,7 @@
 
                             <!-- Text input -->
                             <div class="form">
-                                <input type="text" id="telefone" name="telefone" class="form-control" />
+                                <input type="tel" pattern="[0-9]{2}[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(+xx) xx-xxxx-xxxxx" id="telefone" name="telefone" class="form-control" />
                                 <label class="form-label" for="telefone">Telefone</label>
                             </div>
 
@@ -482,7 +482,7 @@
 
                             <!-- Email input -->
                             <div class="form">
-                                <input type="email" id="email" name="email" class="form-control" />
+                                <input type="email"  pattern=".+@gmail\.com" id="email" name="email" class="form-control" placeholder="xxxx@gmail.com" />
                                 <label class="form-label" for="email">Email</label>
                             </div>
 
