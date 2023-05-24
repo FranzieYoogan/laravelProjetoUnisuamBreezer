@@ -468,6 +468,10 @@ class TelecallController extends Controller
         return view('errors2cadastro');
     }
 
+    public function esqueciSenha() {
+        return view('esquecisenha');
+    }
+
 
 
 

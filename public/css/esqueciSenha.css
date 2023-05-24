@@ -1,0 +1,19 @@
+.botaoEsqueci {
+    background-color: #CA1C2A;
+}
+
+.botaoEsqueci:hover {
+    background-color: black;
+}
+
+.fundoTitulo {
+    background-color: #CA1C2A;
+}
+
+.anchorCor {
+    color: #CA1C2A;
+}
+
+.anchorCor:hover {
+    color: #CA1C2A;
+}

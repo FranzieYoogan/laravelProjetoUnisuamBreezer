@@ -42,6 +42,8 @@ Route::get('/cadastrar',[TelecallController::class,'cadastrar']);
 
 Route::POST('/cadastrar',[TelecallController::class,'storeCadastrar']);
 
+Route::get('esquecisenha',[TelecallController::class,'esqueciSenha']);
+
 
 
 

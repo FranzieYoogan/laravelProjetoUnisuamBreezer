@@ -52,7 +52,7 @@
             <div class="d-flex justify-content-end align-items-center">
               
              
-              <a routerLink="/esqueci-minha-senha" class="text-body">Esqueceu sua senha?</a>
+              <a href="/esquecisenha" class="text-body">Esqueceu sua senha?</a>
             </div>
   
             <div class="text-center text-lg-start mt-4 pt-2">
