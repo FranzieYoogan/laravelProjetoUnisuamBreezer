@@ -37,14 +37,14 @@
   
             <!-- Email input -->
             <div class="form mb-4">
-              <input type="email" id="email" name="email" class="form-control form-control-lg"
+              <input type="email" pattern=".+@gmail\.com" id="email" name="email" class="form-control form-control-lg"
                 placeholder="Entre um endereço de Email válido" />
               
             </div>
   
             <!-- Password input -->
             <div class="form mb-3">
-              <input type="password" id="senha" name="senha" class="form-control form-control-lg"
+              <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="senha" name="senha" class="form-control form-control-lg"
                 placeholder="Entre sua senha" />
               
             </div>
