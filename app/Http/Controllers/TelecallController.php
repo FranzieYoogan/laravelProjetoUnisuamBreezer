@@ -43,7 +43,7 @@ class TelecallController extends Controller
 
         $fale_conosco = new Fale_conosco;
 
-
+        
 
 
         $fale_conosco->nome = $request->nome;
@@ -52,6 +52,7 @@ class TelecallController extends Controller
         $fale_conosco->email = $request->email;
         $fale_conosco->mensagem = $request->mensagem;
         $fale_conosco->checkbox = $request->checkbox;
+        $fale_conosco->tipo_suporte = $request->tipo_suporte;
 
         if (
             
@@ -63,36 +64,53 @@ class TelecallController extends Controller
                 $request->email)->exists())
         ) {
 
-            return redirect('/')->with('msgDadosExistentes','Dados Existentes!!');
+            return redirect('/')->with('msgDadosExistentes','Dados Existentes');
+
+        }  elseif (
+            $request->tipo_suporte == '-- Seleciona uma opção --' and !$request->checkbox and ($request->nome or $request->empresa or
+                $request->telefone or $request->email or $request->mensagem)
+        ) {
+            return redirect('/')->with('msgErrorCheckSelect','Confirme e Selecione uma Opção'); 
 
 
-        } elseif (
+         
+         
+        }     elseif (
+            $request->tipo_suporte == '-- Seleciona uma opção --' and ($request->nome or $request->empresa or
+                $request->telefone or $request->email or $request->mensagem or $request->checkbox )
+        ) {
+            return redirect('/')->with('msgErrorSelect','Selecione uma opção'); 
+
+         } elseif (
             $request->checkbox and (!$request->nome or !$request->empresa or
-                !$request->telefone or !$request->email or !$request->mensagem)
+                !$request->telefone or !$request->email or !$request->mensagem
+                or $request->tipo_suporte == '-- Seleciona uma opção --')
         ) {
 
-            return redirect('/')->with('msgCampoVazio','Campos Vazios!!');
+            return redirect('/')->with('msgCampoVazio','Campos Vazios');
 
         } elseif (
             !$request->checkbox and (!$request->nome or !$request->empresa or
-                !$request->telefone or !$request->email or !$request->mensagem)
+                !$request->telefone or !$request->email or !$request->mensagem or $request->tipo_suporte == '-- Seleciona uma opção --')
         ) {
-            return redirect('/')->with('msgErrors2','Confirme e Preencha os Campos!!');
+            return redirect('/')->with('msgErrors2','Confirme, selecione uma opção e Preencha os Campos!!');
         } elseif (
             !$request->checkbox and ($request->nome or $request->empresa or
-                $request->telefone or $request->email or $request->mensagem)
+                $request->telefone or $request->email or $request->mensagem or $request->tipo_suporte != '-- Seleciona uma opção --')
         ) {
             return redirect('/')->with('msgError','Confirme o Campo!!');
 
-        } elseif (
+         } elseif (
             ($request->checkbox) and ($request->nome) and
             ($request->empresa) and
-            ($request->telefone) and ($request->email)
-            and ($request->mensagem)
+            ($request->telefone) and ($request->email) and ($request->mensagem)
+            and ($request->tipo_suporte != '-- Seleciona uma opção --')
         ) {
 
+            
+
             $fale_conosco->save();
-            return redirect('/')->with('msgEntraremosEmContato','Entraremos em Contato!!');
+            return redirect('/')->with('msgEntraremosEmContato','Entraremos em contato!!');
 
 
 
@@ -133,9 +151,10 @@ class TelecallController extends Controller
 
     public function storeContato(Request $request)
     {
+        
         $fale_conosco = new Fale_conosco;
 
-        $select = $_POST["tipo_suporte"];
+        
 
 
         $fale_conosco->nome = $request->nome;
@@ -159,31 +178,48 @@ class TelecallController extends Controller
             return redirect('/contato')->with('msgDadosExistentesContato','Dados Existentes');
 
 
-        } elseif (
+        }  elseif (
+            $request->tipo_suporte == '-- Seleciona uma opção --' and !$request->checkbox and ($request->nome or $request->empresa or
+                $request->telefone or $request->email or $request->mensagem)
+        ) {
+            return redirect('/contato')->with('msgErrorCheckSelectContato','Confirme e Selecione uma Opção'); 
+
+
+         }    elseif (
+            $request->tipo_suporte == '-- Seleciona uma opção --' and ($request->nome or $request->empresa or
+                $request->telefone or $request->email or $request->mensagem or $request->checkbox )
+        ) {
+            return redirect('/contato')->with('msgErrorSelectContato','Selecione uma opção'); 
+
+
+         }
+         elseif (
             $request->checkbox and (!$request->nome or !$request->empresa or
                 !$request->telefone or !$request->email or !$request->mensagem
-                or !$request->tipo_suporte)
+                or $request->tipo_suporte == '-- Seleciona uma opção --')
         ) {
 
             return redirect('/contato')->with('msgCampoVazioContato','Campos Vazios');
 
         } elseif (
             !$request->checkbox and (!$request->nome or !$request->empresa or
-                !$request->telefone or !$request->email or !$request->mensagem or !$request->tipo_suporte)
+                !$request->telefone or !$request->email or !$request->mensagem or $request->tipo_suporte == '-- Seleciona uma opção --')
         ) {
-            return redirect('/contato')->with('msgErrors2Contato','Confirme e Preencha os Campos!!');
+            return redirect('/contato')->with('msgErrors2Contato','Confirme, selecione uma opção e Preencha os Campos!!');
         } elseif (
             !$request->checkbox and ($request->nome or $request->empresa or
-                $request->telefone or $request->email or $request->mensagem or $request->tipo_suporte)
+                $request->telefone or $request->email or $request->mensagem or $request->tipo_suporte != '-- Seleciona uma opção --')
         ) {
             return redirect('/contato')->with('msgErrorContato','Confirme o Campo!!');
 
-        } elseif (
+         } elseif (
             ($request->checkbox) and ($request->nome) and
             ($request->empresa) and
-            ($request->telefone) and ($request->email)
-            and ($request->mensagem)
+            ($request->telefone) and ($request->email) and ($request->mensagem)
+            and ($request->tipo_suporte != '-- Seleciona uma opção --')
         ) {
+
+            
 
             $fale_conosco->save();
             return redirect('/contato')->with('msgEntraremosEmContatoContato','Entraremos em contato!!');

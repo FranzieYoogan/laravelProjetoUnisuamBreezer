@@ -79,7 +79,7 @@
       </div>
       <div class="mb-3">
         <select class="form-select" id="tipo_suporte" name="tipo_suporte" @required(true) aria-label="Default select example">
-          <option selected>-- Seleciona uma opção</option>
+          <option selected>-- Seleciona uma opção --</option>
       
               
           
@@ -105,17 +105,32 @@
           <p class="msgBad">Dados Existentes!!</p>
       @endif
 
+
+
       @if (session('msgCampoVazioContato'))
       <p class="msgBad">Campos Vazios!!</p>
   @endif
+
+  @if (session('msgErrorCheckSelectContato'))
+      <p class="msgBad">Selecione uma Opção e Confirme o Campo!!</p>
+  @endif
+
+
 
   @if (session('msgErrorContato'))
       <p class="msgBad">Confirme o Campo!!</p>
   @endif
 
-  @if (session('msgErrors2Contato'))
-  <p class="msgBad">Confirme e Preencha os Campos!!</p>
+  @if (session('msgErrorSelectContato'))
+  <p class="msgBad">Selecione uma Opção</p>
 @endif
+
+
+  @if (session('msgErrors2Contato'))
+  <p class="msgBad">Confirme, Selecione uma Opção e Preencha os Campos!!</p>
+@endif
+
+
 
 @if (session('msgEntraremosEmContatoContato'))
 <p class="msgGood">Entraremos em Contato!!</p>

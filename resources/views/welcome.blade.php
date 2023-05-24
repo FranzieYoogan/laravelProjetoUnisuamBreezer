@@ -504,9 +504,21 @@
 
                                 <input class="form-check-input" type="checkbox" value="checked"
                                      id="checkbox"
-                                    name="checkbox" />
-                                <label class="form-check-label" for="checkbox">Confirmar </label>
+                                    name="checkbox" style="margin-top: 12px;"/>
+                                <label class="form-check-label" style="margin-top: 7px;" for="checkbox">Confirmar </label>
                                
+                                <div class="mb-3">
+                                    <select class="form-select" id="tipo_suporte" name="tipo_suporte" @required(true) aria-label="Default select example" style="margin-left: 20px;">
+                                      <option selected>-- Seleciona uma opção --</option>
+                                  
+                                          
+                                      
+                                      <option value="comercial">Comercial</option>
+                                      <option value="suportecnico">Suporte Técnico</option>
+                                      <option value="administrativoFinanceiro">Administrativo / Financeiro</option>
+                                      <option value="outros">Outros</option>
+                                    </select>
+                                  </div>
 
                             </div>
 
@@ -522,10 +534,16 @@
                                     @if (session('msgDadosExistentes'))
                                         <p class="msgBad">Dados existentes</p>
                                     @endif
+
+                                    
+                                    @if (session('msgErrorSelect'))
+                                        <p class="msgBad">Selecione uma Opção</p>
+                                    @endif
+
+                                    @if (session('msgErrorCheckSelect'))
+                                    <p class="msgBad">Confirme o Campo e Selecione uma Opção</p>
+                                @endif
                              
-                               
-    
-                              
                                   
                                     @if (session('msgCampoVazio'))
                                         <p class="msgBad">Campos Vazios!!</p>
@@ -534,7 +552,7 @@
                                 
     
                                     @if (session('msgErrors2'))
-                                    <p class="msgBad">Confirme e Preencha os Campos!!</p>
+                                    <p class="msgBad">Confirme, selecione uma opção e Preencha os Campos!!</p>
                                 @endif
                             
     
