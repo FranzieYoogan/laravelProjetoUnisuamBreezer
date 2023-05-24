@@ -20,7 +20,7 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form flex-fill mb-0">
-                                            <input type="text" id="nome" name="nome" class="form-control" />
+                                            <input type="text" pattern="[A-Za-z]+" minlength="8" maxlength="25" id="nome" name="nome" class="form-control" />
                                             <label class="form-label" for="nome">Nome</label>
                                         </div>
                                     </div>
@@ -45,7 +45,8 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form flex-fill mb-0">
-                                            <input type="password" id="senha" name="senha" class="form-control" />
+                                            <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="senha" name="senha" class="form-control" 
+                                             />
                                             <label class="form-label" for="senha">Senha</label>
                                         </div>
                                     </div>
@@ -53,7 +54,8 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                         <div class="form flex-fill mb-0">
-                                            <input type="password" id="senha2" name="senha2" class="form-control" />
+                                            <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="senha2" name="senha2" class="form-control" 
+                                             />
                                             <label class="form-label" for="senha2">Repita sua senha</label>
                                         </div>
                                     </div>
