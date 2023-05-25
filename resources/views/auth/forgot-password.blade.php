@@ -12,12 +12,12 @@
           <p class="card-text py-2">
               Entre seu Email e iremos enviá-lo um Email com instruções para o resete de sua senha.
           </p>
-          <x-auth-session-status class="mb-4" :status="session('status')" />
+          <x-auth-session-status class="mb-4 msgGood" :status="session('status')" />
           <form action="{{ route('password.email') }}" method="POST">
             @csrf
             <div class="form">
               <x-text-input type="email" pattern=".+@gmail\.com" id="email" name="email" :value="old('email')" required autofocus class="form-control my-3" placeholder="Email" />
-              <x-input-error :messages="$errors->get('email')" class="mt-2" />
+              <x-input-error :messages="$errors->get('email')" class="mt-2 msgBad" />
           </div>
           <x-primary-button type="submit" class="btn btn-primary w-100 botaoEsqueci">Resetar Senha</x-primary-button>
           

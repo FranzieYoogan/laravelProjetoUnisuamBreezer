@@ -326,8 +326,7 @@ class TelecallController extends Controller
         $email = User::where('email',request('email'))->value('email');
        
 
-        $login->email = $request->email;
-        $login->password = $request->senha;
+        
 
 
     if (!$request->email OR !$request->password) {
@@ -361,21 +360,21 @@ class TelecallController extends Controller
        
         $cadastrar = new User;
 
-        $cadastrar->nome = $request->nome;
+        $cadastrar->name = $request->name;
         $cadastrar->email = $request->email;
         $cadastrar->telefone = $request->telefone;
-        $cadastrar->password = $request->senha;
-        $cadastrar->password2 = $request->senha2;
+        $cadastrar->password = $request->password;
+        $cadastrar->password2 = $request->password2;
         $cadastrar->checkbox = $request->checkbox;
 
 
 
-       if( ($request->checkbox) and ($request->nome)
+       if( ($request->checkbox) and ($request->name)
         and
         ($request->telefone) and ($request->email)
-        and ($request->password) and ($request->password2 == $request->senha) and !(Cadastro::where('email',
+        and ($request->password) and ($request->password2 == $request->password) and !(User::where('email',
         $request->email)->exists())
-    and !(Cadastro::where('telefone',
+    and !(User::where('telefone',
         $request->telefone)->exists())) {
 
             $cadastrar->save();
@@ -385,14 +384,14 @@ class TelecallController extends Controller
         
 
         }elseif (
-            $request->checkbox and (!$request->nome or
+            $request->checkbox and (!$request->name or
                 !$request->telefone or !$request->email or !$request->password
-                or !$request->password)
+                or !$request->password2)
         ) {
            
             return  redirect('/cadastrar')->with('msgCampoVazioCadastro','Campos Vazios');
 
-               } elseif ($request->password2 != $request->password AND ($request->checkbox) and ($request->nome)
+               } elseif ($request->password2 != $request->password AND ($request->checkbox) and ($request->name)
         and
         ($request->telefone) and ($request->email)
         ) {
@@ -402,7 +401,7 @@ class TelecallController extends Controller
 
         }
         elseif (
-            !$request->checkbox and ($request->nome or
+            !$request->checkbox and ($request->name or
                 $request->telefone or $request->email or $request->password or $request->password2)
         ) {
             return redirect('/cadastrar')->with('msgErrorCadastro','Confirme o Campo!!');
@@ -410,7 +409,7 @@ class TelecallController extends Controller
         } 
 
     elseif (
-        !$request->checkbox AND (!$request->nome OR
+        !$request->checkbox AND (!$request->name OR
             !$request->telefone OR !$request->email OR !$request->password OR !$request->password2) 
          
     ) {
@@ -420,9 +419,9 @@ class TelecallController extends Controller
 
     elseif(
         
-        (Cadastro::where('email',
+        (User::where('email',
             $request->email)->exists())
-        or (Cadastro::where('telefone',
+        or (User::where('telefone',
             $request->telefone)->exists())
         
     ) {

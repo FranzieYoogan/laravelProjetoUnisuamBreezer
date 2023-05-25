@@ -42,7 +42,9 @@ class NewPasswordController extends Controller
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user) use ($request) {
                 $user->forceFill([
-                    'password' => Hash::make($request->password),
+                    // 'password' => Hash::make($request->password),
+                    'email' => ($request->email),
+                    'password' => ($request->password),
                     'remember_token' => Str::random(60),
                 ])->save();
 
@@ -54,9 +56,10 @@ class NewPasswordController extends Controller
         // the application's home authenticated view. If there is an error we can
         // redirect them back to where they came from with their error message.
         return $status == Password::PASSWORD_RESET
-                    // ? redirect()->route('/logintelecall')->with('status', __($status))
-                    ? redirect('/logintelecall')->with('status', __($status))
+                   
+                    // ? redirect('/logintelecall')->with('status', __($status))
+                    ? redirect('/logintelecall')->with('status', 'Senha alterada com sucesso!!')
                     : back()->withInput($request->only('email'))
-                            ->withErrors(['email' => __($status)]);
+                            ->withErrors(['email' => 'Email Incorreto!!']);
     }
 }

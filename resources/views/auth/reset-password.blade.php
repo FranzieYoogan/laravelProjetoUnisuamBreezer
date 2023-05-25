@@ -20,18 +20,18 @@
 
           <div class="form">
               <x-text-input type="email" pattern=".+@gmail\.com" id="email" name="email" :value="old('email')" required autofocus class="form-control my-3" placeholder="Email" />
-              <x-input-error :messages="$errors->get('email')" class="mt-2" />
+              <x-input-error :messages="$errors->get('email')" class="mt-2 msgBad" />
           </div>
 
          
 
         <div class="form">
-            <x-text-input type="password" pattern="[A-Za-z0-9\W+]+" id="password" name="password" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua Senha" />
+            <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="password" name="password" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua Senha" />
           
         </div>
 
         <div class="form">
-            <x-text-input type="password" pattern="[A-Za-z0-9\W+]+" id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua senha novamente" />
+            <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8"  id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua senha novamente" />
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 

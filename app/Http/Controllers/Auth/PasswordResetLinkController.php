@@ -38,8 +38,8 @@ class PasswordResetLinkController extends TelecallController
         );
 
         return $status == Password::RESET_LINK_SENT
-                    ? back()->with('status', __($status))
+                    ? back()->with('status', 'Mensagem Enviada com Sucesso!!')
                     : back()->withInput($request->only('email'))
-                            ->withErrors(['email' => __($status)]);
+                            ->withErrors(['email' => 'Email invalido!!']);
     }
 }
