@@ -14,7 +14,7 @@
             class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form action="/login" method="POST">
+          <form action="/logintelecall" method="POST">
             @csrf
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">Faça o login pelo</p>
@@ -44,7 +44,7 @@
   
             <!-- Password input -->
             <div class="form mb-3">
-              <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="senha" name="senha" class="form-control form-control-lg"
+              <input type="password" pattern="[A-Za-z0-9\W+]+" minlength="8" maxlength="8" id="password" name="password" class="form-control form-control-lg"
                 placeholder="Entre sua senha" />
               
             </div>
@@ -52,7 +52,7 @@
             <div class="d-flex justify-content-end align-items-center">
               
              
-              <a href="/esquecisenha" class="text-body">Esqueceu sua senha?</a>
+              <a href="/forgot-password" class="text-body">Esqueceu sua senha?</a>
             </div>
   
             <div class="text-center text-lg-start mt-4 pt-2">
@@ -70,6 +70,11 @@
 
             @if(session('msgCampoVazioLogin'))
             <p class="msgBad">Campos Vazios!!</p>
+        @endif
+
+        @if (session('status'))
+        <x-auth-session-status class="mb-4 msgGood" :status="session('status')" /> 
+            
         @endif
 
               <p class="small fw-bold mt-2 pt-1 mb-0 " >Não possui uma conta? <a href="/cadastrar"

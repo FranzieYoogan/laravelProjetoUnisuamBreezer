@@ -10,14 +10,31 @@
       <div class="card-header h5 text-white  fundoTitulo">Resete de Senha</div>
       <div class="card-body px-5">
           <p class="card-text py-2">
-              Entre seu Email e iremos enviá-lo um Email com instruções para o resete de sua senha.
+              Digite as informações para alterar sua senha
           </p>
-          <x-auth-session-status class="mb-4" :status="session('status')" />
-          <form action="{{ route('password.email') }}" method="POST">
+          
+          <form action="{{ route('password.store') }}"  method="POST">
+            @csrf
+                    <!-- Password Reset Token -->
+        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+
           <div class="form">
               <x-text-input type="email" pattern=".+@gmail\.com" id="email" name="email" :value="old('email')" required autofocus class="form-control my-3" placeholder="Email" />
-              
+              <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
+
+         
+
+        <div class="form">
+            <x-text-input type="password" pattern="[A-Za-z0-9\W+]+" id="password" name="password" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua Senha" />
+          
+        </div>
+
+        <div class="form">
+            <x-text-input type="password" pattern="[A-Za-z0-9\W+]+" id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  class="form-control my-3" placeholder="Digite sua senha novamente" />
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
           <button type="submit" class="btn btn-primary w-100 botaoEsqueci">Resetar Senha</button>
           
           <div class="d-flex justify-content-between mt-4">

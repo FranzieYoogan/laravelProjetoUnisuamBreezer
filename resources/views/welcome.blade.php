@@ -4,7 +4,7 @@
 @section('content')
 @section('title', 'home')
 
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/dashboard.css">
 <main>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -598,7 +598,7 @@
                                 Wpp: (21)93618-0100</p>
                             <h4>Carreiras</h4>
                             <p>
-                                <a href="/home/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
+                                <a href="/dashboard/carreiras">Clique aqui</a> para verificar as vagas disponíveis.
                             </p>
                         </div>
                 

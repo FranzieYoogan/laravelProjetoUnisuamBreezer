@@ -92,7 +92,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/login"><i class="fa-solid fa-user"></i> Área do Cliente</a>
+                                <a class="nav-link" href="/logintelecall"><i class="fa-solid fa-user"></i> Área do Cliente</a>
                             </li>
                         </ul>
                     </div>

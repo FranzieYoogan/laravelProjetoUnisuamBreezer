@@ -14,11 +14,12 @@
           </p>
           <x-auth-session-status class="mb-4" :status="session('status')" />
           <form action="{{ route('password.email') }}" method="POST">
-          <div class="form">
+            @csrf
+            <div class="form">
               <x-text-input type="email" pattern=".+@gmail\.com" id="email" name="email" :value="old('email')" required autofocus class="form-control my-3" placeholder="Email" />
-              
+              <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
-          <button type="submit" class="btn btn-primary w-100 botaoEsqueci">Resetar Senha</button>
+          <x-primary-button type="submit" class="btn btn-primary w-100 botaoEsqueci">Resetar Senha</x-primary-button>
           
           <div class="d-flex justify-content-between mt-4">
               <a class="anchorCor" href="/logintelecall">Login</a>
